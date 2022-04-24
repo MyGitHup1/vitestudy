@@ -12,6 +12,7 @@
     "autoprefixer": "^10.4.4",
     "less": "^4.1.2",
     "postcss-plugin": "^1.0.0",
+    "sass": "^1.50.1",
     "unplugin-icons": "^0.14.1",
     "unplugin-vue-components": "^0.19.3",
     "vue": "^3.2.25",
