@@ -15,7 +15,7 @@ export default defineConfig({
     }), Icons({scale: 2, defaultClass: "icon"})],
     build: {
         emptyOutDir: true,
-        outDir: "docs",
+        outDir: "dist",
         assetsInlineLimit: 1024 * 10,
         rollupOptions: {
             input: {
