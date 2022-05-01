@@ -1,6 +1,6 @@
 <script lang="tsx">
 import logo from "#/logo2.png"
-import "@/common/a"
+// import "@/common/a"
 export default {
   setup() {
     function btn() {

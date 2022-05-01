@@ -4,19 +4,28 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "ssr-dev": "cross-env NODE_ENV=development nodemon server.js",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:client": "vite build --outDir dist/client ",
+    "build:server": "vite build --outDir dist/server --ssr src/entry-server.js"
   },
   "dependencies": {
     "@iconify/json": "^2.1.29",
+    "@vue/server-renderer": "^3.2.33",
     "autoprefixer": "^10.4.4",
+    "compression": "^1.7.4",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.3",
     "less": "^4.1.2",
     "postcss-plugin": "^1.0.0",
     "sass": "^1.50.1",
+    "serve-static": "^1.15.0",
     "unplugin-icons": "^0.14.1",
     "unplugin-vue-components": "^0.19.3",
     "vue": "^3.2.25",
-    "vue-router": "^4.0.14"
+    "vue-router": "^4.0.14",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.1",

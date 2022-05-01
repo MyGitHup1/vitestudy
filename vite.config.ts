@@ -15,20 +15,25 @@ export default defineConfig({
     }), Icons({scale: 2, defaultClass: "icon"})],
     build: {
         emptyOutDir: true,
-        outDir: "dist",
+        // outDir: "dist",
         assetsInlineLimit: 1024 * 10,
         rollupOptions: {
-            input: {
-                main: path.resolve(__dirname, "index.html"),
-                sb: path.resolve(__dirname, "sb/index.html")
+            // input: {
+            //     main: path.resolve(__dirname, "./src/index.html"),
+            //     // sb: path.resolve(__dirname, "sb/index.html")
+            // },
+            output:{
+                inlineDynamicImports:true,
             }
-        }
+        },
+        ssrManifest:true,
     },
     define: {age: 10086},
     resolve: {
         alias: {"@": "/src", "#": "/src/assets"},
         extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
     },
-    base: "/vitestudy/",
-    server: {},
+    base: "/",
+    server: {
+    },
 })

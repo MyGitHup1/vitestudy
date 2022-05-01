@@ -22,6 +22,7 @@
 import {reactive} from "vue";
 import {useRouter} from "vue-router";
 
+console.log(process.env.NODE_ENV)
 var router = useRouter()
 var cached = reactive([])
 
@@ -57,7 +58,8 @@ function translate(name) {
   color: #2c3e50;
   margin-top: 60px;
 }
-.icon{
+
+.icon {
   color: #42b983;
 }
 </style>
