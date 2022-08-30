@@ -1,9 +1,4 @@
 <template>
-  <!--  <p>-->
-  <!--    <router-link to="/">Go to Home</router-link>-->
-  <!--    |-->
-  <!--    <router-link to="/about">About</router-link>-->
-  <!--  </p>-->
   <p>
     <button @click="xiaohui('/')">X</button>
     <button @click="to('/')">Home</button>
@@ -13,16 +8,18 @@
     <button @click="to('/about')">About</button>
   </p>
   <router-view v-slot="{ Component }">
-    <keep-alive :include="cached">
+    <keep-alive v-if="cached.length" :include="cached">
       <component :is="Component"/>
     </keep-alive>
+    <component v-if="!cached.length" :is="Component"/>
   </router-view>
+  <button @click="store.count+=1">add{{store.count}}</button>
 </template>
 <script setup>
-import {reactive} from "vue";
+import {reactive, ref} from "vue";
 import {useRouter} from "vue-router";
+import {store} from "@/store/test.js"
 
-console.log(process.env.NODE_ENV)
 var router = useRouter()
 var cached = reactive([])
 

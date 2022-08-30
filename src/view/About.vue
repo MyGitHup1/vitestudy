@@ -1,5 +1,5 @@
 <template>
-  <p>about111249</p>
+  <p>about111249111</p>
   <p>{{ num }}</p>
   <p @click="$store.state.num+=1">store{{ $store.state.num }}</p>
   <render-fun></render-fun>
@@ -13,7 +13,7 @@
 import {ref} from "vue";
 import RenderFun from "./RenderFun.vue";
 
-console.log("about env",process.env.NODE_ENV)
+console.log("about env", process.env.NODE_ENV)
 export default {
   name: "About",
   components: {RenderFun},
@@ -24,7 +24,12 @@ export default {
   created() {
     console.log("About create")
   },
+  mounted() {
+    this.t = setInterval(() => console.log("t"), 1000)
+    console.log("mounted")
+  },
   unmounted() {
+    clearInterval(this.t)
     console.log("about xiaohuia")
   }
 }

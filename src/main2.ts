@@ -5,7 +5,7 @@ import {createR} from "./router/index2";
 import  store from "./store/index.ts"
 const modules = import.meta.glob('./common/*.vue')
 console.log("main222222221")
-export function createApp() {
+export function _createApp() {
     var app = createSSRApp(App);
     app.use(store)
     for (const path in modules) {

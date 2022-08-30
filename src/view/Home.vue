@@ -1,8 +1,7 @@
 <template>
-  <img alt="Vue logo" src="../assets/logo.png"/>
-  <p>store:{{ $store.state.num }}</p>
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite"/>
-  <p>homes</p>
+    <img alt="Vue logo" src="../assets/logo.png"/>
+    <p>store:{{ $store.state.num }}</p>
+        <HelloWorld msg="Hello Vue 3 + TypeScript + Vite"/>
 </template>
 
 <script>

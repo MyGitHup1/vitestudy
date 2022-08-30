@@ -4,7 +4,6 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
-import * as path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -22,11 +21,11 @@ export default defineConfig({
             //     main: path.resolve(__dirname, "./src/index.html"),
             //     // sb: path.resolve(__dirname, "sb/index.html")
             // },
-            output:{
-                inlineDynamicImports:true,
+            output: {
+                inlineDynamicImports: true,
             }
         },
-        ssrManifest:true,
+        ssrManifest: true,
     },
     define: {age: 10086},
     resolve: {
@@ -36,4 +35,6 @@ export default defineConfig({
     base: "/",
     server: {
     },
+
+
 })

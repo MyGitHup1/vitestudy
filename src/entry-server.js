@@ -1,8 +1,8 @@
-import {createApp} from "./main2";
+import {_createApp} from "./main2";
 import {renderToString} from "@vue/server-renderer";
 import path, { basename } from 'path'
 
-var {app, router} = createApp()
+var {app, router} = _createApp()
 
 export async function render(url, manifest) {
     await router.push(url);
